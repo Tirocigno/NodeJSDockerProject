@@ -1,0 +1,14 @@
+var express = require('express');
+var port = 3000;
+var app = express();
+var bodyParser = require('body-parser');
+
+var todos = ['buy the milk', 'rent a car', 'feed the cat'];
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+//todo
+
+app.listen(port);
+console.log('todo list API server started on: ' + port);
